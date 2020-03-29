@@ -2,6 +2,7 @@ package _03_polymorphs;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
 
 public class CirclePolymorph extends Polymorph {
 
@@ -24,5 +25,4 @@ public class CirclePolymorph extends Polymorph {
 		g.setColor(Color.white);
 		g.fillRect(x + 50, y + 150, 50, 50);
 	}
-
 }
