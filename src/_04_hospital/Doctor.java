@@ -11,7 +11,7 @@ public class Doctor extends Hospital{
 	Doctor() {
 		generalPractitioners = new ArrayList<GeneralPractitioner>();
 		surgeons = new ArrayList<Surgeon>();
-		doctorsPatients = new ArrayList<Patient>(3);
+		doctorsPatients = new ArrayList<Patient>(0);
 	}
 	
 	public boolean performsSurgery() {
@@ -23,7 +23,9 @@ public class Doctor extends Hospital{
 	}
 
 	public void assignPatient(Patient patient) {
-		doctorsPatients.add(patient);
+		if (doctorsPatients.size() < 2) {
+			doctorsPatients.add(patient);
+		}
 	}
 	
 	public ArrayList<Patient> getPatients() {

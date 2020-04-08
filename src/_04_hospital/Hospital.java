@@ -26,7 +26,7 @@ public class Hospital {
 	public void assignPatientsToDoctors() {
 		for(int i = 0; i < patients.size(); i++) {
 			if (doctors.get(i%3).doctorsPatients.size() < 2) {
-				doctors.get(i%3).addPatient(patients.get(i));
+				doctors.get(i%3).assignPatient(patients.get(i));
 			}
 		}
 	}
